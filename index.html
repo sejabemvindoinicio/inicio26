@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cassio Ferreira da Silva | Obras de Alvenaria em Suzano/SP</title>
+<meta name="description" content="Serviços de obras de alvenaria com qualidade e confiança em Suzano/SP. Orçamento grátis pelo telefone (11) 5586-8499. CNPJ 53.935.469/0001-89.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#1e3a8a;
+    --primary-light:#3b82f6;
+    --secondary:#f97316;
+    --secondary-dark:#ea580c;
+    --accent:#0ea5e9;
+    --dark:#0f172a;
+    --gray:#64748b;
+    --light:#f8fafc;
+    --cream:#f1f5f9;
+  }
+  *{scroll-behavior:smooth}
+  body{
+    font-family:'Montserrat',sans-serif;
+    background:var(--light);
+    color:var(--dark);
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-weight:800}
+  .display-title{font-family:'Bebas Neue',sans-serif;letter-spacing:2px;line-height:1}
+
+  /* NAVBAR */
+  .navbar{
+    background:rgba(255,255,255,.97);
+    backdrop-filter:blur(12px);
+    box-shadow:0 4px 20px rgba(0,0,0,.08);
+    padding:.8rem 0;
+  }
+  .navbar-brand{
+    font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:1px;
+    color:var(--primary)!important;
+  }
+  .navbar-brand span{color:var(--secondary)}
+  .nav-link{font-weight:600;color:var(--dark)!important;font-size:.95rem;transition:.3s}
+  .nav-link:hover{color:var(--secondary)!important}
+  .btn-cta{
+    background:linear-gradient(135deg,var(--secondary),var(--secondary-dark));
+    color:#fff;border:none;padding:.7rem 1.8rem;border-radius:8px;
+    font-weight:700;box-shadow:0 8px 25px rgba(249,115,22,.35);
+    transition:.3s;
+  }
+  .btn-cta:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(249,115,22,.5);color:#fff}
+
+  /* HERO */
+  .hero{
+    min-height:100vh;
+    display:flex;align-items:center;
+    background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%);
+    position:relative;overflow:hidden;padding-top:90px;color:#fff;
+  }
+  .hero::before{
+    content:'';position:absolute;inset:0;
+    background-image:
+      linear-gradient(rgba(59,130,246,.08) 1px,transparent 1px),
+      linear-gradient(90deg,rgba(59,130,246,.08) 1px,transparent 1px);
+    background-size:50px 50px;
+    mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);
+  }
+  .hero::after{
+    content:'';position:absolute;width:600px;height:600px;
+    background:radial-gradient(circle,rgba(249,115,22,.25),transparent 65%);
+    border-radius:50%;bottom:-200px;right:-150px;
+  }
+  .hero .container{position:relative;z-index:1}
+  .hero h1{font-size:clamp(2.2rem,5vw,4.2rem);line-height:1.05;margin-bottom:1.5rem}
+  .hero h1 span{color:var(--secondary)}
+  .hero p.lead{font-size:1.15rem;color:#cbd5e1;max-width:560px}
+  .hero-img{
+    border-radius:20px;box-shadow:0 30px 60px rgba(0,0,0,.5);
+    border:4px solid rgba(255,255,255,.1);
+  }
+  .hero-stat{
+    display:inline-flex;align-items:center;gap:.6rem;
+    background:rgba(255,255,255,.08);backdrop-filter:blur(10px);
+    padding:.8rem 1.2rem;border-radius:12px;border:1px solid rgba(255,255,255,.12);
+  }
+  .hero-stat i{font-size:1.6rem;color:var(--secondary)}
+  .hero-stat strong{font-size:1.2rem;display:block;line-height:1}
+  .hero-stat small{color:#94a3b8;font-size:.75rem}
+
+  /* FEATURES */
+  .section{padding:5rem 0}
+  .section-title{text-align:center;margin-bottom:3.5rem}
+  .section-title h2{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:.5rem}
+  .section-title h2 span{color:var(--secondary)}
+  .section-title p{color:var(--gray);max-width:620px;margin:0 auto}
+  .feature-card{
+    background:#fff;border-radius:16px;padding:2.2rem 1.8rem;
+    height:100%;transition:.4s;border:1px solid #e2e8f0;
+    position:relative;overflow:hidden;
+  }
+  .feature-card::before{
+    content:'';position:absolute;top:0;left:0;width:100%;height:4px;
+    background:linear-gradient(90deg,var(--primary),var(--secondary));
+    transform:scaleX(0);transform-origin:left;transition:.4s;
+  }
+  .feature-card:hover::before{transform:scaleX(1)}
+  .feature-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(30,58,138,.15);border-color:var(--primary-light)}
+  .feature-icon{
+    width:70px;height:70px;border-radius:14px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:2rem;color:#fff;margin-bottom:1.2rem;
+    background:linear-gradient(135deg,var(--primary),var(--primary-light));
+  }
+  .feature-card:nth-child(2) .feature-icon{background:linear-gradient(135deg,var(--secondary),var(--secondary-dark))}
+  .feature-card:nth-child(3) .feature-icon{background:linear-gradient(135deg,var(--accent),#0284c7)}
+  .feature-card h4{font-weight:700;font-size:1.15rem;margin-bottom:.6rem}
+  .feature-card p{color:var(--gray);font-size:.95rem;margin:0}
+
+  /* SERVIÇOS */
+  .services-section{background:var(--cream)}
+  .service-item{
+    display:flex;gap:1.2rem;align-items:flex-start;
+    background:#fff;padding:1.8rem;border-radius:14px;
+    transition:.3s;border-left:4px solid var(--primary);
+    height:100%;
+  }
+  .service-item:hover{transform:translateX(6px);box-shadow:0 10px 30px rgba(0,0,0,.08);border-left-color:var(--secondary)}
+  .service-item i{font-size:2rem;color:var(--secondary);flex-shrink:0}
+  .service-item h5{font-weight:700;font-size:1.05rem;margin-bottom:.4rem}
+  .service-item p{color:var(--gray);font-size:.9rem;margin:0}
+
+  /* SOBRE */
+  .about-img{border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+  .about-section h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.2rem}
+  .about-section p{color:#475569;line-height:1.8}
+  .check-item{display:flex;gap:.8rem;margin-bottom:.9rem;align-items:flex-start}
+  .check-item i{color:var(--secondary);font-size:1.3rem;flex-shrink:0;margin-top:2px}
+
+  /* PORTFÓLIO */
+  .gallery img{
+    width:100%;height:280px;object-fit:cover;border-radius:16px;
+    transition:.4s;cursor:pointer;
+  }
+  .gallery img:hover{transform:scale(1.04);box-shadow:0 20px 40px rgba(0,0,0,.15)}
+
+  /* PROCESSO */
+  .process-section{background:linear-gradient(135deg,var(--primary),#1e40af);color:#fff}
+  .process-section h2{color:#fff}
+  .process-section .section-title p{color:#cbd5e1}
+  .process-step{
+    text-align:center;padding:2rem 1rem;position:relative;
+  }
+  .process-step .num{
+    width:70px;height:70px;border-radius:50%;
+    background:var(--secondary);color:#fff;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.6rem;font-weight:800;margin:0 auto 1.2rem;
+    box-shadow:0 10px 25px rgba(249,115,22,.5);
+  }
+  .process-step h5{font-weight:700;margin-bottom:.6rem}
+  .process-step p{color:#cbd5e1;font-size:.9rem;margin:0}
+
+  /* CTA */
+  .cta-section{
+    background:linear-gradient(135deg,var(--secondary),var(--secondary-dark));
+    color:#fff;text-align:center;padding:4.5rem 0;position:relative;overflow:hidden;
+  }
+  .cta-section::before{content:'';position:absolute;width:300px;height:300px;background:rgba(255,255,255,.1);border-radius:50%;top:-100px;left:-50px}
+  .cta-section::after{content:'';position:absolute;width:400px;height:400px;background:rgba(255,255,255,.08);border-radius:50%;bottom:-180px;right:-80px}
+  .cta-section h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:1rem;position:relative;z-index:1}
+  .cta-section p{position:relative;z-index:1;opacity:.95;max-width:620px;margin:0 auto 2rem}
+  .btn-whats{
+    background:#fff;color:var(--secondary-dark);font-weight:700;
+    padding:1rem 2.5rem;border-radius:8px;border:none;font-size:1.1rem;
+    position:relative;z-index:1;transition:.3s;box-shadow:0 10px 30px rgba(0,0,0,.2);
+  }
+  .btn-whats:hover{transform:translateY(-3px);background:#f8fafc;color:var(--secondary-dark)}
+
+  /* LEGAL */
+  .legal-section{background:#fff;padding:4rem 0}
+  .legal-content{
+    background:var(--light);border-radius:14px;padding:2.5rem;
+    border-left:5px solid var(--primary);
+  }
+  .legal-content h3{font-size:1.2rem;font-weight:700;color:var(--primary);margin:1.5rem 0 .6rem}
+  .legal-content h3:first-child{margin-top:0}
+  .legal-content p,.legal-content li{color:#475569;font-size:.95rem;line-height:1.75}
+  .accordion-button:not(.collapsed){background:var(--cream);color:var(--primary)}
+  .accordion-button{font-weight:700;font-size:1.05rem}
+  .accordion-item{border:1px solid #e2e8f0!important}
+
+  /* FOOTER */
+  .footer{background:var(--dark);color:#94a3b8;padding:4rem 0 1.5rem}
+  .footer h5{color:#fff;font-weight:700;font-size:1.05rem;margin-bottom:1.2rem}
+  .footer a{color:#94a3b8;text-decoration:none;transition:.3s;display:inline-block}
+  .footer a:hover{color:var(--secondary)}
+  .footer .brand{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:1px;color:var(--secondary);margin-bottom:1rem}
+  .footer .data-line{font-size:.82rem;color:#94a3b8;margin-bottom:.5rem;line-height:1.5}
+  .footer .data-line i{color:var(--secondary);margin-right:.4rem}
+  .footer-bottom{border-top:1px solid #1e293b;margin-top:2.5rem;padding-top:1.5rem;text-align:center;font-size:.85rem;color:#64748b}
+  .social-icons a{
+    display:inline-flex;width:40px;height:40px;border-radius:8px;
+    background:#1e293b;align-items:center;justify-content:center;
+    margin-right:.5rem;color:#fff;font-size:1.1rem;
+  }
+  .social-icons a:hover{background:var(--secondary);color:#fff}
+
+  /* WHATSAPP FIXO */
+  .whatsapp-float{
+    position:fixed;bottom:25px;right:25px;width:60px;height:60px;
+    background:#25d366;border-radius:50%;display:flex;align-items:center;justify-content:center;
+    color:#fff;font-size:2rem;z-index:999;box-shadow:0 8px 25px rgba(37,211,102,.5);
+    animation:pulse 2s infinite;text-decoration:none;
+  }
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  @media(max-width:768px){
+    .hero{padding-top:80px;text-align:center}
+    .hero p.lead{margin:0 auto}
+    .section{padding:3.5rem 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">
+      <i class="bi bi-bricks me-1"></i> CASSIO <span>ALVENARIA</span>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+      <i class="bi bi-list fs-1" style="color:var(--primary)"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="#home">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfólio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#legal">Legal</a></li>
+        <li class="nav-item ms-lg-3">
+          <a class="btn-cta" href="tel:+551155868499">
+            <i class="bi bi-telephone-fill me-1"></i> Orçamento Grátis
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <span class="badge rounded-pill mb-3" style="background:rgba(249,115,22,.15);color:var(--secondary);font-weight:600;padding:.6rem 1.2rem;border:1px solid rgba(249,115,22,.3)">
+          <i class="bi bi-geo-alt-fill"></i> Suzano - São Paulo
+        </span>
+        <h1 class="display-title">
+          OBRAS DE <span>ALVENARIA</span><br>
+          COM QUALIDADE<br>
+          E CONFIANÇA
+        </h1>
+        <p class="lead mb-4 mt-3">
+          Serviços especializados em obras de alvenaria em Suzano e região.
+          Construção, reforma e acabamento com profissionalismo e preço justo.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a href="tel:+551155868499" class="btn btn-cta btn-lg">
+            <i class="bi bi-telephone-fill me-2"></i> (11) 5586-8499
+          </a>
+          <a href="#servicos" class="btn btn-outline-light btn-lg rounded-0 px-4" style="font-weight:600">
+            Nossos Serviços <i class="bi bi-arrow-right ms-1"></i>
+          </a>
+        </div>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <div class="hero-stat">
+            <i class="bi bi-award-fill"></i>
+            <div><strong>2024</strong><small>Empresa Registrada</small></div>
+          </div>
+          <div class="hero-stat">
+            <i class="bi bi-shield-check"></i>
+            <div><strong>MEI</strong><small>Empresa Legalizada</small></div>
+          </div>
+          <div class="hero-stat">
+            <i class="bi bi-star-fill"></i>
+            <div><strong>100%</strong><small>Compromisso</small></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=700&q=80" alt="Obras de alvenaria" class="img-fluid hero-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="section" id="recursos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Por que escolher a <span>Cassio Alvenaria</span>?</h2>
+      <p>Qualidade técnica, materiais de primeira linha e compromisso com prazos em cada obra.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4"><div class="feature-card"><div class="feature-icon"><i class="bi bi-bricks"></i></div><h4>Profissionais Qualificados</h4><p>Mão de obra experiente e especializada em obras de alvenaria, garantindo acabamento impecável.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><div class="feature-icon"><i class="bi bi-clock-history"></i></div><h4>Prazo Cumprido</h4><p>Compromisso com prazos e cronogramas definidos, para que sua obra termine quando você espera.</p></div></div>
+      <div class="col-md-4"><div class="feature-card"><div class="feature-icon"><i class="bi bi-shield-check"></i></div><h4>Garantia de Serviço</h4><p>Serviços executados com qualidade e garantia, oferecendo segurança e tranquilidade.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="section services-section" id="servicos">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nossos <span>Serviços</span></h2>
+      <p>Atendemos desde pequenas reformas até grandes obras de alvenaria em Suzano e região.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6"><div class="service-item"><i class="bi bi-building"></i><div><h5>Construção de Alvenaria</h5><p>Levantamento de paredes, tijolos, blocos e estruturas de alvenaria com precisão e segurança.</p></div></div></div>
+      <div class="col-md-6"><div class="service-item"><i class="bi bi-tools"></i><div><h5>Reformas em Geral</h5><p>Reformas residenciais e comerciais, ampliações, demolições e reorganização de ambientes.</p></div></div></div>
+      <div class="col-md-6"><div class="service-item"><i class="bi bi-house-door"></i><div><h5>Construção de Muros</h5><p>Muros de alvenaria, cercas, paredes de divisa e estruturas de contenção para sua propriedade.</p></div></div></div>
+      <div class="col-md-6"><div class="service-item"><i class="bi bi-palette"></i><div><h5>Acabamento e Reboco</h5><p>Reboco, chapisco, emboço e acabamentos finos para deixar sua obra pronta para pintura.</p></div></div></div>
+      <div class="col-md-6"><div class="service-item"><i class="bi bi-grid-3x3"></i><div><h5>Assentamento de Pisos</h5><p>Assentamento de pisos, azulejos, revestimentos e porcelanatos com acabamento profissional.</p></div></div></div>
+      <div class="col-md-6"><div class="service-item"><i class="bi bi-truck"></i><div><h5>Orçamento e Consultoria</h5><p>Avaliação técnica, medição de materiais e orçamento detalhado sem compromisso.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section class="section about-section" id="sobre">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80" alt="Construção civil" class="img-fluid about-img">
+      </div>
+      <div class="col-lg-6">
+        <span class="badge rounded-pill mb-3" style="background:var(--cream);color:var(--primary);font-weight:700;padding:.6rem 1.2rem">
+          <i class="bi bi-building-check"></i> Nossa História
+        </span>
+        <h2>Sobre a <span style="color:var(--secondary)">Cassio Ferreira da Silva</span></h2>
+        <p>
+          A <strong>53.935.469 Cassio Ferreira da Silva</strong> é uma empresa de construção civil
+          especializada em <strong>obras de alvenaria</strong>, localizada em Suzano/SP e atuando em
+          toda a região metropolitana de São Paulo.
+        </p>
+        <p>
+          Fundada em 2024, nascemos com o propósito de oferecer serviços de alvenaria com
+          qualidade técnica, preço justo e transparência total com nossos clientes.
+        </p>
+        <div class="mt-4">
+          <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>Empresa legalizada e registrada (MEI)</span></div>
+          <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>CNPJ ativo: 53.935.469/0001-89</span></div>
+          <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>Inscrição Estadual SP: 672.677.378.114</span></div>
+          <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>Atendimento em Suzano e região metropolitana</span></div>
+          <div class="check-item"><i class="bi bi-check-circle-fill"></i><span>Orçamento sem compromisso</span></div>
+        </div>
+        <a href="tel:+551155868499" class="btn btn-cta mt-3">
+          <i class="bi bi-telephone-fill me-2"></i> Solicitar Orçamento
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFÓLIO -->
+<section class="section" id="portfolio">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nosso <span>Portfólio</span></h2>
+      <p>Um pouco do nosso trabalho em obras de alvenaria, reformas e construções.</p>
+    </div>
+    <div class="row g-4 gallery">
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=600&q=80" alt="Obra 1"></div>
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=600&q=80" alt="Obra 2"></div>
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1590725140246-20acdee442be?w=600&q=80" alt="Obra 3"></div>
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=600&q=80" alt="Obra 4"></div>
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1503596476-1c12a8ba09a9?w=600&q=80" alt="Obra 5"></div>
+      <div class="col-md-4"><img src="https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?w=600&q=80" alt="Obra 6"></div>
+    </div>
+    <p class="text-center text-muted mt-4"><small><i class="bi bi-info-circle"></i> As imagens acima são ilustrativas. Substitua pelas fotos reais das suas obras.</small></p>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section class="section process-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Como <span style="color:var(--secondary)">Trabalhamos</span></h2>
+      <p>Um processo transparente do primeiro contato até a entrega da obra.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-3 col-6"><div class="process-step"><div class="num">1</div><h5>Contato</h5><p>Entre em contato por telefone e conte o que precisa.</p></div></div>
+      <div class="col-md-3 col-6"><div class="process-step"><div class="num">2</div><h5>Visita</h5><p>Fazemos a visita técnica para avaliação do local.</p></div></div>
+      <div class="col-md-3 col-6"><div class="process-step"><div class="num">3</div><h5>Orçamento</h5><p>Enviamos um orçamento detalhado sem compromisso.</p></div></div>
+      <div class="col-md-3 col-6"><div class="process-step"><div class="num">4</div><h5>Execução</h5><p>Executamos a obra com qualidade e no prazo combinado.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Precisa de uma obra de alvenaria em Suzano?</h2>
+    <p>Solicite agora seu orçamento gratuito. Atendemos Suzano e toda a região metropolitana de São Paulo.</p>
+    <a href="tel:+551155868499" class="btn btn-whats">
+      <i class="bi bi-telephone-fill me-2"></i> Ligar: (11) 5586-8499
+    </a>
+    <a href="mailto:cassiolima.cl87@gmail.com" class="btn btn-outline-light btn-lg ms-2 mt-2 mt-sm-0" style="font-weight:600;border-radius:8px">
+      <i class="bi bi-envelope-fill me-2"></i> Enviar E-mail
+    </a>
+  </div>
+</section>
+
+<!-- LEGAL -->
+<section class="legal-section" id="legal">
+  <div class="container">
+    <div class="section-title">
+      <h2>Informações <span>Legais</span></h2>
+      <p>Transparência e conformidade com a LGPD e o Código de Defesa do Consumidor.</p>
+    </div>
+
+    <div class="accordion" id="accordionLegal">
+
+      <!-- POLÍTICA -->
+      <div class="accordion-item mb-3 rounded-3 overflow-hidden shadow-sm">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#politica">
+            <i class="bi bi-shield-lock-fill me-2" style="color:var(--primary)"></i> Política de Privacidade
+          </button>
+        </h2>
+        <div id="politica" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+          <div class="accordion-body">
+            <div class="legal-content">
+              <p><strong>Última atualização:</strong> 15/11/2026</p>
+              <p>A <strong>53.935.469 Cassio Ferreira da Silva</strong>, inscrita no CNPJ sob o nº <strong>53.935.469/0001-89</strong>, com sede em Suzano/SP, valoriza a sua privacidade e está comprometida com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018 - LGPD).</p>
+
+              <h3>1. Coleta de Dados</h3>
+              <p>Coletamos apenas as informações necessárias para prestar nossos serviços de obras de alvenaria, tais como:</p>
+              <ul>
+                <li>Nome completo;</li>
+                <li>Endereço da obra ou residência;</li>
+                <li>Número de telefone;</li>
+                <li>Endereço de e-mail;</li>
+                <li>Informações sobre o serviço pretendido.</li>
+              </ul>
+
+              <h3>2. Finalidade do Uso dos Dados</h3>
+              <p>Seus dados são utilizados exclusivamente para:</p>
+              <ul>
+                <li>Elaborar orçamentos e propostas;</li>
+                <li>Entrar em contato sobre serviços solicitados;</li>
+                <li>Executar os serviços contratados;</li>
+                <li>Cumprir obrigações legais e fiscais.</li>
+              </ul>
+
+              <h3>3. Compartilhamento de Dados</h3>
+              <p>Não vendemos, alugamos ou compartilhamos seus dados pessoais com terceiros, exceto quando necessário para a execução dos serviços ou por exigência legal.</p>
+
+              <h3>4. Segurança dos Dados</h3>
+              <p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados, perda, alteração ou destruição.</p>
+
+              <h3>5. Direitos do Titular</h3>
+              <p>Em conformidade com a LGPD, você tem direito a:</p>
+              <ul>
+                <li>Confirmar a existência de tratamento dos seus dados;</li>
+                <li>Acessar seus dados;</li>
+                <li>Corrigir dados incompletos ou desatualizados;</li>
+                <li>Solicitar a exclusão dos seus dados;</li>
+                <li>Revogar o consentimento a qualquer momento.</li>
+              </ul>
+
+              <h3>6. Cookies</h3>
+              <p>Este site pode utilizar cookies para melhorar sua experiência de navegação. Você pode desativá-los nas configurações do seu navegador.</p>
+
+              <h3>7. Contato</h3>
+              <p>Para exercer seus direitos ou esclarecer dúvidas sobre esta Política, entre em contato:</p>
+              <p>
+                <i class="bi bi-envelope-fill me-1" style="color:var(--primary)"></i> <a href="mailto:cassiolima.cl87@gmail.com">cassiolima.cl87@gmail.com</a><br>
+                <i class="bi bi-telephone-fill me-1" style="color:var(--primary)"></i> (11) 5586-8499
+              </p>
+
+              <h3>8. Alterações</h3>
+              <p>Esta Política pode ser atualizada periodicamente. Recomendamos revisá-la sempre que acessar nosso site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TERMOS -->
+      <div class="accordion-item mb-3 rounded-3 overflow-hidden shadow-sm">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#termos">
+            <i class="bi bi-file-earmark-text-fill me-2" style="color:var(--secondary)"></i> Termos de Uso
+          </button>
+        </h2>
+        <div id="termos" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+          <div class="accordion-body">
+            <div class="legal-content" style="border-left-color:var(--secondary)">
+              <p><strong>Última atualização:</strong> 15/11/2026</p>
+              <p>Bem-vindo(a) ao site da <strong>53.935.469 Cassio Ferreira da Silva</strong> (CNPJ 53.935.469/0001-89). Ao acessar e utilizar este site, você concorda com os termos e condições descritos abaixo.</p>
+
+              <h3>1. Objeto</h3>
+              <p>Este site tem como finalidade apresentar os serviços de obras de alvenaria prestados pela empresa, bem como permitir o contato para solicitação de orçamentos.</p>
+
+              <h3>2. Uso do Site</h3>
+              <p>O usuário compromete-se a utilizar o site de forma lícita, ética e respeitosa, sendo vedado:</p>
+              <ul>
+                <li>Utilizar o site para fins ilegais ou não autorizados;</li>
+                <li>Reproduzir, copiar ou distribuir conteúdo sem autorização;</li>
+                <li>Tentar invadir, hackear ou comprometer a segurança do site;</li>
+                <li>Publicar conteúdo ofensivo, difamatório ou ilícito.</li>
+              </ul>
+
+              <h3>3. Orçamentos e Serviços</h3>
+              <ul>
+                <li>Os orçamentos são elaborados após visita técnica e avaliação do local;</li>
+                <li>Os prazos de execução são definidos em contrato ou proposta formal;</li>
+                <li>As imagens do portfólio são ilustrativas, podendo haver variações conforme o projeto;</li>
+                <li>O pagamento é realizado conforme combinado no momento da contratação.</li>
+              </ul>
+
+              <h3>4. Propriedade Intelectual</h3>
+              <p>Todos os textos, imagens, logotipos e demais conteúdos deste site são de propriedade exclusiva da empresa, sendo protegidos pela Lei de Direitos Autorais (Lei nº 9.610/98). É proibida a reprodução sem autorização prévia por escrito.</p>
+
+              <h3>5. Limitação de Responsabilidade</h3>
+              <p>A empresa não se responsabiliza por:</p>
+              <ul>
+                <li>Interrupções temporárias do site por motivos técnicos;</li>
+                <li>Danos causados por uso indevido das informações disponibilizadas;</li>
+                <li>Informações de terceiros eventualmente linkadas neste site.</li>
+              </ul>
+
+              <h3>6. Garantia</h3>
+              <p>Os serviços executados possuem garantia conforme o Código de Defesa do Consumidor e o contrato firmado entre as partes, respeitando os prazos e condições estabelecidos.</p>
+
+              <h3>7. Modificações</h3>
+              <p>A empresa reserva-se o direito de alterar estes Termos a qualquer momento, sem aviso prévio. Recomendamos a leitura periódica.</p>
+
+              <h3>8. Foro</h3>
+              <p>Fica eleito o foro da Comarca de Suzano/SP para dirimir quaisquer questões oriundas destes Termos.</p>
+
+              <h3>9. Contato</h3>
+              <p>
+                <i class="bi bi-envelope-fill me-1" style="color:var(--primary)"></i> <a href="mailto:cassiolima.cl87@gmail.com">cassiolima.cl87@gmail.com</a><br>
+                <i class="bi bi-telephone-fill me-1" style="color:var(--primary)"></i> (11) 5586-8499
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOBRE -->
+      <div class="accordion-item mb-3 rounded-3 overflow-hidden shadow-sm">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sobreLegal">
+            <i class="bi bi-building-fill me-2" style="color:var(--accent)"></i> Sobre a Empresa
+          </button>
+        </h2>
+        <div id="sobreLegal" class="accordion-collapse collapse" data-bs-parent="#accordionLegal">
+          <div class="accordion-body">
+            <div class="legal-content" style="border-left-color:var(--accent)">
+              <h3>Dados Cadastrais</h3>
+              <ul>
+                <li><strong>Razão Social:</strong> 53.935.469 Cassio Ferreira da Silva</li>
+                <li><strong>Nome Fantasia:</strong> Cassio Ferreira da Silva</li>
+                <li><strong>CNPJ:</strong> 53.935.469/0001-89</li>
+                <li><strong>Inscrição Estadual SP:</strong> 672.677.378.114</li>
+                <li><strong>Data de Abertura:</strong> 16/02/2024</li>
+                <li><strong>Porte:</strong> Microempreendedor Individual (MEI)</li>
+                <li><strong>Natureza Jurídica:</strong> Empresário (Individual)</li>
+                <li><strong>Atividade Principal:</strong> 43.99-1-03 — Obras de alvenaria</li>
+              </ul>
+
+              <h3>Nossa História</h3>
+              <p>A empresa <strong>53.935.469 Cassio Ferreira da Silva</strong>, de CNPJ <strong>53.935.469/0001-89</strong>, foi fundada em 16/02/2024 na cidade de Suzano, estado de São Paulo. Sua atividade principal, conforme a Receita Federal, é a execução de obras de alvenaria.</p>
+              <p>Atuamos em toda a região metropolitana de São Paulo com foco em qualidade, segurança e cumprimento de prazos. Nosso compromisso é entregar obras bem executadas, com transparência e preço justo.</p>
+
+              <h3>Localização</h3>
+              <p>
+                <i class="bi bi-geo-alt-fill me-1" style="color:var(--primary)"></i> Avenida Conde de Monte Cristo, 915 — Casa 5<br>
+                Jardim Monte Cristo — CEP: 08670-020<br>
+                Suzano/SP
+              </p>
+
+              <h3>Contato</h3>
+              <p>
+                <i class="bi bi-envelope-fill me-1" style="color:var(--primary)"></i> <a href="mailto:cassiolima.cl87@gmail.com">cassiolima.cl87@gmail.com</a><br>
+                <i class="bi bi-telephone-fill me-1" style="color:var(--primary)"></i> (11) 5586-8499
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="brand"><i class="bi bi-bricks me-1"></i> CASSIO ALVENARIA</div>
+        <p style="font-size:.9rem;line-height:1.7">Obras de alvenaria com qualidade e confiança em Suzano/SP e região metropolitana de São Paulo.</p>
+        <div class="social-icons mt-3">
+          <a href="tel:+551155868499"><i class="bi bi-telephone-fill"></i></a>
+          <a href="mailto:cassiolima.cl87@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h5>Dados da Empresa</h5>
+        <p class="data-line"><i class="bi bi-building"></i> Razão Social: 53.935.469 Cassio Ferreira da Silva</p>
+        <p class="data-line"><i class="bi bi-card-text"></i> CNPJ: 53.935.469/0001-89</p>
+        <p class="data-line"><i class="bi bi-file-earmark-text"></i> Inscrição Estadual SP: 672.677.378.114</p>
+        <p class="data-line"><i class="bi bi-calendar-check"></i> Abertura: 16/02/2024</p>
+        <p class="data-line"><i class="bi bi-briefcase"></i> Porte: MEI — Empresário Individual</p>
+        <p class="data-line"><i class="bi bi-tag"></i> CNAE: 43.99-1-03 — Obras de alvenaria</p>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h5>Contato & Localização</h5>
+        <p class="data-line"><i class="bi bi-geo-alt-fill"></i> Av. Conde de Monte Cristo, 915 — Casa 5</p>
+        <p class="data-line"><i class="bi bi-mailbox"></i> Jardim Monte Cristo — CEP: 08670-020</p>
+        <p class="data-line"><i class="bi bi-geo"></i> Suzano/SP</p>
+        <p class="data-line"><i class="bi bi-envelope-fill"></i> <a href="mailto:cassiolima.cl87@gmail.com">cassiolima.cl87@gmail.com</a></p>
+        <p class="data-line"><i class="bi bi-telephone-fill"></i> <a href="tel:+551155868499">(11) 5586-8499</a></p>
+        <div class="mt-3">
+          <a href="#legal" class="d-block mb-1" style="font-size:.85rem"><i class="bi bi-chevron-right"></i> Política de Privacidade</a>
+          <a href="#legal" class="d-block" style="font-size:.85rem"><i class="bi bi-chevron-right"></i> Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 <strong>53.935.469 Cassio Ferreira da Silva</strong> — CNPJ 53.935.469/0001-89 — Todos os direitos reservados.<br>
+      <small>Site desenvolvido em conformidade com a LGPD e o Código de Defesa do Consumidor.</small>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
